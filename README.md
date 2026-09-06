@@ -9,7 +9,7 @@ results (`history/`, `api/`, `graphs/`), open an issue when a check
 fails and close it when it recovers, and publish the site to GitHub
 Pages from the `gh-pages` branch.
 
-This repository is private; the page it publishes is public.
+This repository is public because the page reads its data from the repo's raw files; it is locked to collaborators (interaction limit, renewed every six months; fork workflows need approval; wiki, projects and discussions off).
 
 - **Change what is watched**: edit `sites` in `.upptimerc.yml`. Add a
   product's rows there; add Shout!'s production rows when production
