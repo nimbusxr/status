@@ -17,9 +17,11 @@ This repository is public because the page reads its data from the repo's raw fi
   production project exists.
 - **Post an incident note**: comment on the open issue; it renders on
   the page.
-- **Secrets**: `GH_PAT`, a fine-grained personal access token for this
-  repository with Contents, Issues and Workflows read/write. The default
-  Actions token cannot trigger the other workflows.
+- **Secrets**: `GH_PAT`, a classic personal access token of
+  `nimbusxr-bot` with scopes `repo` and `workflow` (fine-grained tokens
+  are refused for git pushes in this org). It lives in Infisical
+  (project `status`, environment `production`); the Actions secret is a
+  copy. The default Actions token cannot trigger the other workflows.
 - The page is on GitHub; a GitHub outage freezes it at its last result.
   Each product keeps its own independent alerting; Shout!'s is Google
   Cloud Monitoring uptime checks, see its `docs/infrastructure.md`.
