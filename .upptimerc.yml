@@ -1,31 +1,51 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Shout! status page. Upptime: GitHub Actions check the endpoints, commit
+# the results, and publish the site to GitHub Pages at status.nimbusxr.us.
+# Docs: https://upptime.js.org/docs/configuration
+owner: nimbusxr
+repo: status
 
+# One row per public endpoint. /health answers 200 with {"status":"ok",
+# "version":…} on both services. Production rows go here when it exists;
+# until then the page watches staging, and says so.
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Website (staging)
+    url: https://shout-dev.nimbusxr.us/health
+    icon: https://storage.googleapis.com/nimbusxr-shout-assets/logo-128.png
+    maxResponseTime: 3000
+  - name: Chat service (staging)
+    url: https://shout-internal.nimbusxr.cloud/health
+    icon: https://storage.googleapis.com/nimbusxr-shout-assets/logo-128.png
+    maxResponseTime: 3000
+
+# Incidents are GitHub issues; assign them so GitHub emails on open/close.
+assignees:
+  - joshuaNathaniel
+
+workflowSchedule:
+  uptime: "*/5 * * * *"        # every 5 minutes (GitHub's cron is best-effort)
+  response-time: "0 */6 * * *" # response-time graphs four times a day
+  graphs: "0 0 * * *"
+  summary: "0 0 * * *"
+  static-site: "0 1 * * *"
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.nimbusxr.us
+  name: Shout! status
+  logoUrl: https://storage.googleapis.com/nimbusxr-shout-assets/logo-256.png
+  introTitle: "**Shout!** status"
+  introMessage: "Live checks of the Shout! website and the Chat service every five minutes, with 90 days of history. Incidents are posted here as they happen. Support: [shout.nimbusxr.us/support](https://shout.nimbusxr.us/support)."
   navbar:
     - title: Status
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+    - title: Shout!
+      href: https://shout.nimbusxr.us
+    - title: Help
+      href: https://shout.nimbusxr.us/help
+    - title: Support
+      href: https://shout.nimbusxr.us/support
+  metaTags:
+    - name: description
+      content: Live status of Shout! for Google Chat
+    - name: robots
+      content: noindex
+  theme: light
