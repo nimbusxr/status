@@ -11,9 +11,10 @@ Pages from the `gh-pages` branch.
 
 This repository is public because the page reads its data from the repo's raw files; it is locked to collaborators (interaction limit, renewed every six months; fork workflows need approval; wiki, projects and discussions off).
 
-- **Change what is watched**: edit `sites` in `.upptimerc.yml`. Add a
-  product's rows there; add Shout!'s production rows when production
-  exists.
+- **Change what is watched**: edit `sites` in `.upptimerc.yml`, one row
+  per production endpoint, named "Product · Service". Staging never goes
+  on this page. Shout!'s rows are drafted there, commented out until its
+  production project exists.
 - **Post an incident note**: comment on the open issue; it renders on
   the page.
 - **Secrets**: `GH_PAT`, a fine-grained personal access token for this

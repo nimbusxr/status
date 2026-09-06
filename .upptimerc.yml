@@ -5,19 +5,21 @@
 owner: nimbusxr
 repo: status
 
-# One row per public endpoint, named "Product · Service". Shout!'s
-# /health answers 200 with {"status":"ok","version":…} on both services.
-# Production rows go in when production exists; until then the page
-# watches staging, and says so. Other products add their rows here.
-sites:
-  - name: Shout! · Website (staging)
-    url: https://shout-dev.nimbusxr.us/health
-    icon: https://storage.googleapis.com/nimbusxr-shout-assets/logo-128.png
-    maxResponseTime: 3000
-  - name: Shout! · Chat service (staging)
-    url: https://shout-internal.nimbusxr.cloud/health
-    icon: https://storage.googleapis.com/nimbusxr-shout-assets/logo-128.png
-    maxResponseTime: 3000
+# One row per production endpoint, named "Product · Service", so every
+# NimbusXR product reads the same way. Staging is never on this page;
+# each product watches its own staging privately (Shout!: Google Cloud
+# Monitoring). Shout!'s /health answers 200 with {"status":"ok",
+# "version":…}. Shout!'s rows go live with its production project:
+#
+#   - name: Shout! · Website
+#     url: https://shout.nimbusxr.us/health
+#     icon: https://storage.googleapis.com/nimbusxr-shout-assets/logo-128.png
+#     maxResponseTime: 3000
+#   - name: Shout! · Chat service
+#     url: https://shout.nimbusxr.cloud/health
+#     icon: https://storage.googleapis.com/nimbusxr-shout-assets/logo-128.png
+#     maxResponseTime: 3000
+sites: []
 
 # Incidents are GitHub issues; assign them so GitHub emails on open/close.
 assignees:
