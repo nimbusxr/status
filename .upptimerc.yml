@@ -1,18 +1,20 @@
-# Shout! status page. Upptime: GitHub Actions check the endpoints, commit
-# the results, and publish the site to GitHub Pages at status.nimbusxr.us.
+# NimbusXR status page, one page for every NimbusXR product. Upptime:
+# GitHub Actions check the endpoints, commit the results, and publish the
+# site to GitHub Pages at status.nimbusxr.us.
 # Docs: https://upptime.js.org/docs/configuration
 owner: nimbusxr
 repo: status
 
-# One row per public endpoint. /health answers 200 with {"status":"ok",
-# "version":…} on both services. Production rows go here when it exists;
-# until then the page watches staging, and says so.
+# One row per public endpoint, named "Product · Service". Shout!'s
+# /health answers 200 with {"status":"ok","version":…} on both services.
+# Production rows go in when production exists; until then the page
+# watches staging, and says so. Other products add their rows here.
 sites:
-  - name: Website (staging)
+  - name: Shout! · Website (staging)
     url: https://shout-dev.nimbusxr.us/health
     icon: https://storage.googleapis.com/nimbusxr-shout-assets/logo-128.png
     maxResponseTime: 3000
-  - name: Chat service (staging)
+  - name: Shout! · Chat service (staging)
     url: https://shout-internal.nimbusxr.cloud/health
     icon: https://storage.googleapis.com/nimbusxr-shout-assets/logo-128.png
     maxResponseTime: 3000
@@ -30,22 +32,19 @@ workflowSchedule:
 
 status-website:
   cname: status.nimbusxr.us
-  name: Shout! status
-  logoUrl: https://storage.googleapis.com/nimbusxr-shout-assets/logo-256.png
-  introTitle: "**Shout!** status"
-  introMessage: "Live checks of the Shout! website and the Chat service every five minutes, with 90 days of history. Incidents are posted here as they happen. Support: [shout.nimbusxr.us/support](https://shout.nimbusxr.us/support)."
+  name: NimbusXR status
+  introTitle: "**NimbusXR** status"
+  introMessage: "Live checks of every NimbusXR service every five minutes, with 90 days of history, and incidents as they happen. Each row is a product and one of its services. Shout! support: [shout.nimbusxr.us/support](https://shout.nimbusxr.us/support)."
   navbar:
     - title: Status
       href: /
+    - title: NimbusXR
+      href: https://nimbusxr.us
     - title: Shout!
       href: https://shout.nimbusxr.us
-    - title: Help
-      href: https://shout.nimbusxr.us/help
-    - title: Support
-      href: https://shout.nimbusxr.us/support
   metaTags:
     - name: description
-      content: Live status of Shout! for Google Chat
+      content: Live status of NimbusXR services
     - name: robots
       content: noindex
   theme: light
