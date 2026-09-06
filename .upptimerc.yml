@@ -31,6 +31,7 @@ workflowSchedule:
   static-site: "0 1 * * *"
 
 status-website:
+  publish: true # the repo is private; without this Upptime publishes a 404 placeholder
   cname: status.nimbusxr.us
   name: NimbusXR status
   introTitle: "**NimbusXR** status"
