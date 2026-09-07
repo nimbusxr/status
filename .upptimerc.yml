@@ -11,13 +11,13 @@ repo: status
 # Monitoring). Shout!'s /health answers 200 with {"status":"ok",
 # "version":…}. Shout!'s rows go live with its production project:
 #
-#   - name: Shout! · Website
+#   - name: Shout! · Website          (icon: a file in assets/, copied into the site)
 #     url: https://shout.nimbusxr.us/health
-#     icon: https://storage.googleapis.com/nimbusxr-shout-assets/logo-128.png
+#     icon: /shout-128.png
 #     maxResponseTime: 3000
 #   - name: Shout! · Chat service
 #     url: https://shout.nimbusxr.cloud/health
-#     icon: https://storage.googleapis.com/nimbusxr-shout-assets/logo-128.png
+#     icon: /shout-128.png
 #     maxResponseTime: 3000
 sites: []
 
