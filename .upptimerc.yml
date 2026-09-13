@@ -11,15 +11,15 @@ repo: status
 # Monitoring). Shout!'s /health answers 200 with {"status":"ok",
 # "version":…}. Shout!'s rows go live with its production project:
 #
-#   - name: Shout! · Website          (icon: a file in assets/, copied into the site)
-#     url: https://shout.nimbusxr.us/health
-#     icon: /shout-128.png
-#     maxResponseTime: 3000
-#   - name: Shout! · Chat service
-#     url: https://shout.nimbusxr.cloud/health
-#     icon: /shout-128.png
-#     maxResponseTime: 3000
-sites: []
+sites:
+  - name: Shout! · Website
+    url: https://shout.nimbusxr.us/health
+    icon: /shout-128.png
+    maxResponseTime: 3000
+  - name: Shout! · Chat service
+    url: https://shout.nimbusxr.cloud/health
+    icon: /shout-128.png
+    maxResponseTime: 3000
 
 # Incidents are GitHub issues; assign them so GitHub emails on open/close.
 assignees:
