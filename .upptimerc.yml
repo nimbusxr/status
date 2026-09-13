@@ -37,14 +37,12 @@ status-website:
   cname: status.nimbusxr.us
   name: NimbusXR status
   introTitle: "**NimbusXR** status"
-  introMessage: "Live checks of every NimbusXR service every five minutes, with 90 days of history, and incidents as they happen. Each row is a product and one of its services. Shout! support: [shout.nimbusxr.us/support](https://shout.nimbusxr.us/support)."
+  introMessage: "Live checks of every NimbusXR service every five minutes, with 90 days of history, and incidents as they happen. Each row is a product and one of its services; each product's own site has its support."
   navbar:
     - title: Status
       href: /
     - title: NimbusXR
       href: https://nimbusxr.us
-    - title: Shout!
-      href: https://shout.nimbusxr.us
   metaTags:
     - name: description
       content: Live status of NimbusXR services
