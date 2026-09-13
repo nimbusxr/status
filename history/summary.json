@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "name": "Shout! · Website",
+    "url": "https://shout.nimbusxr.us/health",
+    "icon": "/shout-128.png",
+    "slug": "shout-website",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 91,
+    "timeDay": 91,
+    "timeWeek": 91,
+    "timeMonth": 91,
+    "timeYear": 91,
+    "dailyMinutesDown": {}
+  },
+  {
+    "name": "Shout! · Chat service",
+    "url": "https://shout.nimbusxr.cloud/health",
+    "icon": "/shout-128.png",
+    "slug": "shout-chat-service",
+    "status": "up",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 187,
+    "timeDay": 187,
+    "timeWeek": 187,
+    "timeMonth": 187,
+    "timeYear": 187,
+    "dailyMinutesDown": {}
+  }
+]
