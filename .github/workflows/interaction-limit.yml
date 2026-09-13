@@ -1,0 +1,18 @@
+# Keeps the repo locked to collaborators. GitHub caps an interaction limit
+# at six months and lets it lapse silently, so this re-applies it monthly;
+# each run resets the clock to six months out. Not an Upptime workflow, so
+# the weekly template update leaves it alone.
+name: Interaction limit
+on:
+  schedule:
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+jobs:
+  renew:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          gh api -X PUT repos/${{ github.repository }}/interaction-limits \
+            -f limit=collaborators_only -f expiry=six_months -q '"collaborators only until " + .expires_at'
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
